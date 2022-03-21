@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:globally_united_ui/model/profiles.dart';
+import 'package:globally_united_ui/pages/becomeanartist.dart';
 
 import 'gridviewprofiles.dart';
 
@@ -13,8 +14,9 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: GridViewOfProfile(
-          heightc: heightc, widthc: widthc, profiles: profiels),
+      body: BecomeAnArtistPage(),
+      // body: GridViewOfProfile(
+      //     heightc: heightc, widthc: widthc, profiles: profiels),
     );
   }
 }

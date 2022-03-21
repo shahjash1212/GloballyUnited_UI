@@ -9,5 +9,8 @@ class Profile {
 }
 
 List<Profile> profiels = [
-  Profile(name: "Aloha Amsterdam", image: "assets/1.png", gu: "2 GU")
+  Profile(name: "Aloha Amsterdam", image: "assets/1.png", gu: "2 GU"),
+  Profile(name: "Aloha Amsterdam", image: "assets/2.png", gu: "2 GU"),
+  Profile(name: "Aloha Amsterdam", image: "assets/3.png", gu: "2 GU"),
+  Profile(name: "Aloha Amsterdam", image: "assets/4.png", gu: "2 GU"),
 ];

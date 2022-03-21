@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:globally_united_ui/pages/applicationstrings.dart';
 
 class BecomeAnArtistPage extends StatefulWidget {
   const BecomeAnArtistPage({Key? key}) : super(key: key);
@@ -121,8 +122,9 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const Text(
-                "If accepted, will you be using your own digital wallet?",
+              Text(
+                // "If accepted, will you be using your own digital wallet?",
+
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               SizedBox(

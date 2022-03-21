@@ -11,6 +11,24 @@ class BecomeAnArtistPage extends StatefulWidget {
 class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
   int _value = 0;
 
+  var firstName = TextEditingController();
+  var lastName = TextEditingController();
+  var eMail = TextEditingController();
+  final socialMedia = TextEditingController();
+  final driveDropbox = TextEditingController();
+  final artworkDrive = TextEditingController();
+  final backgroundInfo = TextEditingController();
+
+  void clearText() {
+    firstName.clear();
+    lastName.clear();
+    eMail.clear();
+    socialMedia.clear();
+    driveDropbox.clear();
+    artworkDrive.clear();
+    backgroundInfo.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -33,7 +51,79 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               const EdgeInsets.only(left: 15.0, right: 15, top: 20, bottom: 20),
           child: Column(
             children: [
-              NameEmailINputs(height: height),
+              Column(
+                children: [
+                  Row(
+                    children: const [
+                      Text(
+                        "First Name",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 16),
+                      ),
+                      Text(
+                        '*',
+                        style: TextStyle(color: Colors.red, fontSize: 18),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: height / 80,
+                  ),
+                  TextField(
+                    controller: firstName,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                  SizedBox(
+                    height: height / 80,
+                  ),
+                  Row(
+                    children: const [
+                      Text(
+                        "Last Name",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 16),
+                      ),
+                      Text(
+                        '*',
+                        style: TextStyle(color: Colors.red, fontSize: 18),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: height / 80,
+                  ),
+                  TextField(
+                    controller: lastName,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                  SizedBox(
+                    height: height / 80,
+                  ),
+                  Row(
+                    children: const [
+                      Text(
+                        "Email",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 16),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: height / 80,
+                  ),
+                  TextField(
+                    controller: eMail,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'abc@gmail.com',
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(
                 height: height / 40,
               ),
@@ -51,7 +141,8 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const TextField(
+              TextField(
+                controller: socialMedia,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Your Answer',
@@ -74,7 +165,8 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const TextField(
+              TextField(
+                controller: driveDropbox,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Your Answer',
@@ -97,7 +189,8 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const TextField(
+              TextField(
+                controller: artworkDrive,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Your Answer',
@@ -113,7 +206,8 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const TextField(
+              TextField(
+                controller: backgroundInfo,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Your Answer',
@@ -186,93 +280,15 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
                         decoration: TextDecoration.underline,
                         color: Colors.blue),
                   ),
-                  onTap: (() {}),
+                  onTap: (() {
+                    clearText();
+                  }),
                 ),
               )
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class NameEmailINputs extends StatelessWidget {
-  const NameEmailINputs({
-    Key? key,
-    required this.height,
-  }) : super(key: key);
-
-  final double height;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: const [
-            Text(
-              "First Name",
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-            ),
-            Text(
-              '*',
-              style: TextStyle(color: Colors.red, fontSize: 18),
-            )
-          ],
-        ),
-        SizedBox(
-          height: height / 80,
-        ),
-        const TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-          ),
-        ),
-        SizedBox(
-          height: height / 80,
-        ),
-        Row(
-          children: const [
-            Text(
-              "Last Name",
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-            ),
-            Text(
-              '*',
-              style: TextStyle(color: Colors.red, fontSize: 18),
-            )
-          ],
-        ),
-        SizedBox(
-          height: height / 80,
-        ),
-        const TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-          ),
-        ),
-        SizedBox(
-          height: height / 80,
-        ),
-        Row(
-          children: const [
-            Text(
-              "Email",
-              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
-            ),
-          ],
-        ),
-        SizedBox(
-          height: height / 80,
-        ),
-        const TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            hintText: 'abc@gmail.com',
-          ),
-        ),
-      ],
     );
   }
 }

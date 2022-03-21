@@ -1,4 +1,5 @@
 class ApplicationStrings {
+
   static String URL_SOCIAL_MEDIA =
       'Please provide full URL social media links and references *';
   static String URL_SOCIAL_MEDIA_DISCRIPTION =
@@ -19,4 +20,6 @@ class ApplicationStrings {
 
   static String DIGITAL_WALLET =
       "If accepted, will you be using your own digital wallet?";
+
+      
 }

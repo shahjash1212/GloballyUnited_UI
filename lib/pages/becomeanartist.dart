@@ -37,15 +37,15 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 40,
               ),
-              const Text(
-                "Please provide full URL social media links and refrences *",
+              Text(
+                ApplicationStrings.URL_SOCIAL_MEDIA,
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               SizedBox(
                 height: height / 80,
               ),
-              const Text(
-                "As we like to ensure the protevtion of artists' creations,identity verification is an important aspect of the on-boarding process.Please temporarily add your email(the same one you provided above) to your Website/Portfolio / Social Media bio,to verify your ownership of theme.List the link(s) where we can verify the placement of your email,below: ",
+              Text(
+                ApplicationStrings.URL_SOCIAL_MEDIA_DISCRIPTION,
                 style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
               ),
               SizedBox(
@@ -60,15 +60,15 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const Text(
-                "Please provide a link to Google Drive or Dropbox with examples of your best, past work. *",
+              Text(
+                ApplicationStrings.PROVIDE_LINK_TO,
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               SizedBox(
                 height: height / 80,
               ),
-              const Text(
-                "Please provide links that showcase examples of your past work.",
+              Text(
+                ApplicationStrings.PROVIDE_LINK_TO_DISCRIPTION,
                 style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
               ),
               SizedBox(
@@ -83,15 +83,15 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const Text(
-                "Please submit three artworks in a single Google Drive or Dropbox URL that you plan to publish on MakersPlace *",
+              Text(
+                ApplicationStrings.SUBMIT_ART_WORK,
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               SizedBox(
                 height: height / 80,
               ),
-              const Text(
-                "Please submit links to 3 high resolution artworks that you wish to sell on MakersPlace. Please included the highest resolution images, to help verify that you own the artwork. (Ensure that all links are accessible by our team members)",
+              Text(
+                ApplicationStrings.SUBMIT_ART_WORK_DISCRIPTION,
                 style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
               ),
               SizedBox(
@@ -106,8 +106,8 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               SizedBox(
                 height: height / 80,
               ),
-              const Text(
-                "Please provide background information on yourself (achievements, awards, etc.) and related to your art career. *",
+              Text(
+                ApplicationStrings.BACKGROUND_INFO,
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               SizedBox(
@@ -123,8 +123,7 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
                 height: height / 80,
               ),
               Text(
-                // "If accepted, will you be using your own digital wallet?",
-
+                ApplicationStrings.DIGITAL_WALLET,
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               SizedBox(

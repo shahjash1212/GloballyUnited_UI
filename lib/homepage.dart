@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:globally_united_ui/model/nfttileinfo.dart';
 import 'package:globally_united_ui/model/profiles.dart';
 import 'package:globally_united_ui/pages/becomeanartist.dart';
+import 'package:globally_united_ui/pages/offersreceiverdpage.dart';
 
 import 'gridviewprofiles.dart';
 import 'nftinfolistview.dart';
@@ -11,12 +12,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var heightc = MediaQuery.of(context).size.height;
-    var widthc = MediaQuery.of(context).size.width;
+    // var heightc = MediaQuery.of(context).size.height;
+    // var widthc = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: NftInfoListView(nfttileinfos: nfttileinfos),
+      body: OffersReceviedPage(),
+      // body: NftInfoListView(nfttileinfos: nfttileinfos),
 
       // BecomeAnArtistPage()
 

@@ -53,190 +53,48 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
             children: [
               Column(
                 children: [
-                  // Row(
-                  //   children: const [
-                  //     Text(
-                  //       "First Name",
-                  //       style: TextStyle(
-                  //           fontWeight: FontWeight.w500, fontSize: 16),
-                  //     ),
-                  //     Text(
-                  //       '*',
-                  //       style: TextStyle(color: Colors.red, fontSize: 18),
-                  //     )
-                  //   ],
-                  // ),
-                  // SizedBox(
-                  //   height: height / 80,
-                  // ),
                   NFTFormField(
                     textEditingController: firstName,
                     lable: 'First Name',
                   ),
-                  // SizedBox(
-                  //   height: height / 80,
-                  // ),
-                  // Row(
-                  //   children: const [
-                  //     Text(
-                  //       "Last Name",
-                  //       style: TextStyle(
-                  //           fontWeight: FontWeight.w500, fontSize: 16),
-                  //     ),
-                  //     Text(
-                  //       '*',
-                  //       style: TextStyle(color: Colors.red, fontSize: 18),
-                  //     )
-                  //   ],
-                  // ),
-                  // SizedBox(
-                  //   height: height / 80,
-                  // ),
-                  // TextField(
-                  //   controller: lastName,
-                  //   decoration: InputDecoration(
-                  //     border: OutlineInputBorder(),
-                  //   ),
-                  // ),
-                  // SizedBox(
-                  //   height: height / 80,
-                  // ),
-
                   NFTFormField(
                       textEditingController: lastName, lable: "Last Name"),
-
                   NFTFormField(
                       lable: "Email",
                       textEditingController: eMail,
                       hintText: 'abc@gmail.com')
-                  // TextField(
-                  //   controller: eMail,
-                  //   decoration: InputDecoration(
-                  //     border: OutlineInputBorder(),
-                  //     hintText: 'abc@gmail.com',
-                  //   ),
-                  // ),
                 ],
               ),
-              // ),
-              // SizedBox(
-              //   height: height / 40,
-              // ),
-              // Text(
-              //   ApplicationStrings.URL_SOCIAL_MEDIA,
-              //   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
-              // Text(
-              //   ApplicationStrings.URL_SOCIAL_MEDIA_DISCRIPTION,
-              //   style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
-              // TextField(
-              //   controller: socialMedia,
-              //   decoration: InputDecoration(
-              //       border: OutlineInputBorder(),
-              //       hintText: 'Your Answer',
-              //       isDense: true),
-              // ),
               NFTFormField(
                 textEditingController: socialMedia,
                 hintText: 'Your Answer',
                 lableHeader: ApplicationStrings.URL_SOCIAL_MEDIA,
                 labelbody: ApplicationStrings.URL_SOCIAL_MEDIA_DISCRIPTION,
               ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
               NFTFormField(
                 textEditingController: driveDropbox,
                 hintText: 'Your Answer',
                 lableHeader: ApplicationStrings.PROVIDE_LINK_TO,
                 labelbody: ApplicationStrings.PROVIDE_LINK_TO_DISCRIPTION,
               ),
-              // Text(
-              //   ApplicationStrings.PROVIDE_LINK_TO,
-              //   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
-              // Text(
-              //   ApplicationStrings.PROVIDE_LINK_TO_DISCRIPTION,
-              //   style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
-              // TextField(
-              //   controller: driveDropbox,
-              //   decoration: InputDecoration(
-              //       border: OutlineInputBorder(),
-              //       hintText: 'Your Answer',
-              //       isDense: true),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
-              // Text(
-              //   ApplicationStrings.SUBMIT_ART_WORK,
-              //   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
               NFTFormField(
                 textEditingController: artworkDrive,
                 hintText: 'Your Answer',
                 lableHeader: ApplicationStrings.SUBMIT_ART_WORK,
                 labelbody: ApplicationStrings.SUBMIT_ART_WORK_DISCRIPTION,
               ),
-              // Text(
-              //   ApplicationStrings.SUBMIT_ART_WORK_DISCRIPTION,
-              //   style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
-              // TextField(
-              //   controller: artworkDrive,
-              //   decoration: InputDecoration(
-              //       border: OutlineInputBorder(),
-              //       hintText: 'Your Answer',
-              //       isDense: true),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
-              // Text(
-              //   ApplicationStrings.BACKGROUND_INFO,
-              //   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
-              // ),
-              // SizedBox(
-              //   height: height / 80,
-              // ),
               NFTFormField(
                 textEditingController: backgroundInfo,
                 lableHeader: ApplicationStrings.BACKGROUND_INFO,
                 hintText: 'Your Answer',
               ),
-              // TextField(
-              //   controller: backgroundInfo,
-              //   decoration: InputDecoration(
-              //       border: OutlineInputBorder(),
-              //       hintText: 'Your Answer',
-              //       isDense: true),
-              // ),
               SizedBox(
                 height: height / 80,
               ),
               Text(
                 ApplicationStrings.DIGITAL_WALLET,
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
               SizedBox(
                 height: height / 80,
@@ -252,9 +110,9 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
                       });
                     },
                   ),
-                  Text(
+                  const Text(
                     "Yes",
-                    style: TextStyle(fontSize: 14),
+                    style:  TextStyle(fontSize: 14),
                   ),
                   Radio(
                     value: 2,
@@ -265,18 +123,18 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
                       });
                     },
                   ),
-                  Text(
+                  const Text(
                     "No",
-                    style: TextStyle(fontSize: 14),
+                    style:  TextStyle(fontSize: 14),
                   ),
                 ],
               ),
               Container(
-                margin: EdgeInsets.all(15),
-                padding: EdgeInsets.all(15),
+                margin: const EdgeInsets.all(15),
+                padding: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    color: Color(0xff341e43)),
+                    color: const Color(0xff341e43)),
                 child: const Center(
                   child: Text(
                     "Apply",
@@ -290,7 +148,7 @@ class _BecomeAnArtistPageState extends State<BecomeAnArtistPage> {
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
                 child: GestureDetector(
-                  child: Text(
+                  child: const Text(
                     "Clear Form",
                     style: TextStyle(
                         fontSize: 16,
@@ -331,7 +189,7 @@ class NFTFormField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 18,
         ),
         lable != null
@@ -339,9 +197,10 @@ class NFTFormField extends StatelessWidget {
                 children: [
                   Text(
                     lable ?? "",
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w500, fontSize: 16),
                   ),
-                  Text(
+                  const Text(
                     '*',
                     style: TextStyle(color: Colors.red, fontSize: 18),
                   )
@@ -351,23 +210,25 @@ class NFTFormField extends StatelessWidget {
         lableHeader != null
             ? Text(
                 lableHeader ?? "",
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               )
             : Container(),
         labelbody != null
             ? Text(
                 labelbody ?? "",
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                style:
+                    const TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
               )
             : Container(),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         TextField(
           controller: textEditingController,
           decoration: InputDecoration(
             hintText: hintText,
-            border: OutlineInputBorder(),
+            border: const OutlineInputBorder(),
           ),
         ),
       ],

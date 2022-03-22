@@ -1,6 +1,6 @@
 class NftTileInfo {
-  final String nftTitle, image, startDate, endDate, status, id;
-  final int token;
+  final String nftTitle, image, startDate, endDate, status,id;
+  final int token,price;
 
   NftTileInfo({
     required this.nftTitle,
@@ -10,6 +10,7 @@ class NftTileInfo {
     required this.token,
     required this.id,
     required this.status,
+    required this.price,
   });
 }
 
@@ -20,8 +21,10 @@ List<NftTileInfo> nfttileinfos = [
     startDate: "10:30 23-12-2021",
     endDate: "10:30",
     token: 4,
-    id: '',
+    id: 'Creator',
     status: '',
+    price: 3400,
+    
   ),
   NftTileInfo(
     nftTitle: "NFT Title 2",
@@ -29,8 +32,9 @@ List<NftTileInfo> nfttileinfos = [
     startDate: "10:30 23-12-2021",
     endDate: "10:30",
     token: 4,
-    id: '',
+    id: 'Creator',
     status: '',
+    price: 34000,
   ),
   NftTileInfo(
     nftTitle: "NFT Title 3",
@@ -38,8 +42,9 @@ List<NftTileInfo> nfttileinfos = [
     startDate: "10:30 23-12-2021",
     endDate: "10:30",
     token: 4,
-    id: '',
+    id: 'Creator',
     status: '',
+    price: 3600,
   ),
   NftTileInfo(
     nftTitle: "NFT Title 4",
@@ -47,7 +52,8 @@ List<NftTileInfo> nfttileinfos = [
     startDate: "10:30 23-12-2021",
     endDate: "10:30",
     token: 4,
-    id: '',
+    id: 'Creator',
     status: '',
+    price: 3500,
   ),
 ];

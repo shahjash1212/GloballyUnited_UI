@@ -16,15 +16,15 @@ class HomePage extends StatelessWidget {
     // var widthc = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: OffersReceviedPage(),
-      // body: NftInfoListView(nfttileinfos: nfttileinfos),
+        backgroundColor: Colors.white,
+        // body: OffersReceviedPage(),
+        // body: NftInfoListView(nfttileinfos: nfttileinfos),
 
-      // BecomeAnArtistPage()
+        body: BecomeAnArtistPage()
 
-      // body: GridViewOfProfile(
-      //     heightc: heightc, widthc: widthc, profiles: profiels),
-    );
+        // body: GridViewOfProfile(
+        //     heightc: heightc, widthc: widthc, profiles: profiels),
+        );
   }
 }
 

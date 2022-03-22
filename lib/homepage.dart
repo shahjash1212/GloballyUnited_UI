@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:globally_united_ui/model/nfttileinfo.dart';
 import 'package:globally_united_ui/model/profiles.dart';
 import 'package:globally_united_ui/pages/becomeanartist.dart';
 
 import 'gridviewprofiles.dart';
+import 'nftinfolistview.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +16,10 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: BecomeAnArtistPage(),
+      body: NftInfoListView(nfttileinfos: nfttileinfos),
+
+      // BecomeAnArtistPage()
+
       // body: GridViewOfProfile(
       //     heightc: heightc, widthc: widthc, profiles: profiels),
     );

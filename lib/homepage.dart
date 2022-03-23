@@ -5,6 +5,7 @@ import 'package:globally_united_ui/pages/becomeanartist.dart';
 import 'package:globally_united_ui/pages/offersreceiverdpage.dart';
 import 'package:globally_united_ui/pages/searchpage.dart';
 
+import 'cardpage.dart';
 import 'gridviewprofiles.dart';
 import 'nftinfolistview.dart';
 
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
         // body: OffersReceviedPage(),
         // body: NftInfoListView(nfttileinfos: nfttileinfos),
 
-        body: SearchPage()
+        body: CardPage(),
 
         // body: GridViewOfProfile(
         //     heightc: heightc, widthc: widthc, profiles: profiels),

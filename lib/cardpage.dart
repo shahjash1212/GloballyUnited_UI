@@ -24,7 +24,7 @@ class CardPage extends StatelessWidget {
           horizontal: 10.0,
         ),
         child: Container(
-          height: 550,
+          height: 560,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               boxShadow: [
@@ -36,26 +36,31 @@ class CardPage extends StatelessWidget {
           child: Card(
             semanticContainer: true,
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Text(
                     cardinfo[0].title,
                     style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.w700),
+                        fontSize: 20, fontWeight: FontWeight.w800),
                   ),
-                  Container(
-                    height: 380,
-                    decoration: const BoxDecoration(
-                        color: Colors.black,
-                        image: DecorationImage(
-                            image: AssetImage("assets/3.png"),
-                            fit: BoxFit.cover)),
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  height: 380,
+                  decoration: const BoxDecoration(
+                      color: Colors.black,
+                      image: DecorationImage(
+                          image: AssetImage("assets/3.png"),
+                          fit: BoxFit.cover)),
+                ),
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
@@ -78,13 +83,16 @@ class CardPage extends StatelessWidget {
                               child: Text(
                                 cardinfo[0].time,
                                 style: const TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.w700),
+                                    fontSize: 12, fontWeight: FontWeight.w600),
                               )),
                         ],
                       ),
                     ],
                   ),
-                  Row(
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Row(
                     children: [
                       Text(
                         "${cardinfo[0].token} GU",
@@ -98,25 +106,26 @@ class CardPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
-                  Center(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(),
-                          borderRadius: BorderRadius.circular(50)),
-                      padding: const EdgeInsets.all(8),
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: const Center(
-                        child: Text(
-                          "Current Bid",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w700),
-                        ),
+                ),
+                const SizedBox(height: 10),
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 50),
+                    decoration: BoxDecoration(
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(50)),
+                    padding: const EdgeInsets.all(8),
+                    width: MediaQuery.of(context).size.width,
+                    child: const Center(
+                      child: Text(
+                        "View NFT Details",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w800),
                       ),
                     ),
-                  )
-                ],
-              ),
+                  ),
+                )
+              ],
             ),
           ),
         ),

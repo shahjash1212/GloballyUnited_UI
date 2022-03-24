@@ -30,4 +30,14 @@ class ApplicationStrings {
   static String SEARCH1_SORTBY_AUCTION = 'On Auction';
   static String SEARCH1_SORTBY_PRICEH_L = 'Price:High to Low';
   static String SEARCH1_SORTBY_SOLD = 'Sold';
+
+  static String SECURITY_NFT_TITLE = 'NFT Sold';
+  static String SECURITY_NFT_DISC =
+      'Receive a code sent to email to sign in everytime you logout from the app to verify your identity';
+  static String SECURITY_AUTH_TITLE = 'Authentication App';
+  static String SECURITY_AUTH_DISC =
+      'Use a mobile aunthentication app to get a verification code to sign in everytime you logout from the app';
+  static String SECURITY_SMS_TITLE = 'SMS text message';
+  static String SECURITY_SMS_DISC =
+      'Receive a text message to your mobile device to signin everytime you logout from the app';
 }

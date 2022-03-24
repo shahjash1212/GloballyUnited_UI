@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:globally_united_ui/model/nfttileinfo.dart';
 import 'package:globally_united_ui/nftinfolistview.dart';
+import 'package:globally_united_ui/pages/applicationstrings.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class NotificationPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: Text(
@@ -33,28 +34,28 @@ class NotificationPage extends StatelessWidget {
               ),
             ),
             NotificationItem(
-              title: 'NFT Sold',
-              discription: 'When somone purchased one of your items',
+              title: ApplicationStrings.NOTIFICATION_NFT_TITLE,
+              discription: ApplicationStrings.NOTIFICATION_NFT_DISC,
             ),
             NotificationItem(
-              title: 'Bid Activity',
-              discription: 'When somone purchased one of your items',
+              title: ApplicationStrings.NOTIFICATION_BID_TITLE,
+              discription: ApplicationStrings.NOTIFICATION_BID_DISC,
             ),
             NotificationItem(
-              title: 'Counter Offer',
-              discription: 'When somone purchased one of your items',
+              title: ApplicationStrings.NOTIFICATION_COUNTER_TITLE,
+              discription: ApplicationStrings.NOTIFICATION_COUNTER_DISC,
             ),
             NotificationItem(
-              title: 'Auction Expiration',
-              discription: 'When somone purchased one of your items',
+              title: ApplicationStrings.NOTIFICATION_AUCTION_TITLE,
+              discription: ApplicationStrings.NOTIFICATION_AUCTION_DISC,
             ),
             NotificationItem(
-              title: 'Outbid',
-              discription: 'When somone purchased one of your items',
+              title: ApplicationStrings.NOTIFICATION_OUTBID_TITLE,
+              discription: ApplicationStrings.NOTIFICATION_OUTBID_DISC,
             ),
             NotificationItem(
-              title: 'Successful Purchase',
-              discription: 'When somone purchased one of your items',
+              title: ApplicationStrings.NOTIFICATION_SUCCESSFUL_TITLE,
+              discription: ApplicationStrings.NOTIFICATION_SUCCESSFUL_DISC,
             ),
           ],
         ),
@@ -107,12 +108,12 @@ class _NotificationItemState extends State<NotificationItem> {
                 onChanged: (newvalue) {
                   setState(() {
                     checkBoxValue = newvalue;
-                    checkBoxValue ? print('yesssss') : print("NOOOOO");
-                    checkBoxValue ? Checked() : UnChecked();
-                    checkBoxValue
-                        ? ScaffoldMessenger.of(context)
-                            .showSnackBar(SnackBar(content: Text(widget.title)))
-                        : UnChecked();
+                    // checkBoxValue ? print('yesssss') : print("NOOOOO");
+                    // checkBoxValue ? Checked() : UnChecked();
+                    // checkBoxValue
+                    //     ? ScaffoldMessenger.of(context)
+                    //         .showSnackBar(SnackBar(content: Text(widget.title)))
+                    //     : UnChecked();
                   });
                 }),
             Text(

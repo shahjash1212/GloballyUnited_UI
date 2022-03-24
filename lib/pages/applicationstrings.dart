@@ -31,6 +31,9 @@ class ApplicationStrings {
   static String SEARCH1_SORTBY_PRICEH_L = 'Price:High to Low';
   static String SEARCH1_SORTBY_SOLD = 'Sold';
 
+
+  //security page
+
   static String SECURITY_NFT_TITLE = 'NFT Sold';
   static String SECURITY_NFT_DISC =
       'Receive a code sent to email to sign in everytime you logout from the app to verify your identity';
@@ -40,4 +43,29 @@ class ApplicationStrings {
   static String SECURITY_SMS_TITLE = 'SMS text message';
   static String SECURITY_SMS_DISC =
       'Receive a text message to your mobile device to signin everytime you logout from the app';
+
+      ///Notification  page
+
+  static String NOTIFICATION_NFT_TITLE = 'NFT Sold';
+  static String NOTIFICATION_NFT_DISC =
+      'When someone purchased one of your items';
+
+  static String NOTIFICATION_BID_TITLE = 'Bid Activity';
+  static String NOTIFICATION_BID_DISC =
+      'When someone bids on one of your items';
+
+  static String NOTIFICATION_COUNTER_TITLE = 'Counter Offer';
+  static String NOTIFICATION_COUNTER_DISC =
+      'When NFT you made an offer on chanfefs in price';
+
+  static String NOTIFICATION_AUCTION_TITLE = 'Auction Expiration';
+  static String NOTIFICATION_AUCTION_DISC = 'When auction you created ends';
+
+  static String NOTIFICATION_OUTBID_TITLE = 'Outbid';
+  static String NOTIFICATION_OUTBID_DISC =
+      'When an offer you placed is exceeded by another user';
+
+  static String NOTIFICATION_SUCCESSFUL_TITLE = 'Successful Purchase';
+  static String NOTIFICATION_SUCCESSFUL_DISC =
+      'When you successfully buy a NFT';
 }

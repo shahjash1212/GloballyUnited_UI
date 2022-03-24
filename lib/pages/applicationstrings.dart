@@ -1,5 +1,4 @@
 class ApplicationStrings {
-
   static String URL_SOCIAL_MEDIA =
       'Please provide full URL social media links and references *';
   static String URL_SOCIAL_MEDIA_DISCRIPTION =
@@ -21,5 +20,14 @@ class ApplicationStrings {
   static String DIGITAL_WALLET =
       "If accepted, will you be using your own digital wallet?";
 
-      
+  //!search page
+
+  static String SEARCH1_LOREM_COLLECTED = 'Collected';
+  static String SEARCH1_LOREM_CREATED = 'Created';
+
+  static String SEARCH1_SORTBY_NEW = 'Newest';
+  static String SEARCH1_SORTBY_PRICEL_h = 'Price:Low to High';
+  static String SEARCH1_SORTBY_AUCTION = 'On Auction';
+  static String SEARCH1_SORTBY_PRICEH_L = 'Price:High to Low';
+  static String SEARCH1_SORTBY_SOLD = 'Sold';
 }

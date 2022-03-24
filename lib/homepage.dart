@@ -3,6 +3,7 @@ import 'package:globally_united_ui/model/nfttileinfo.dart';
 import 'package:globally_united_ui/model/profiles.dart';
 import 'package:globally_united_ui/pages/becomeanartist.dart';
 import 'package:globally_united_ui/pages/offersreceiverdpage.dart';
+import 'package:globally_united_ui/pages/search1.dart';
 import 'package:globally_united_ui/pages/searchpage.dart';
 
 import 'cardpage.dart';
@@ -18,15 +19,15 @@ class HomePage extends StatelessWidget {
     // var widthc = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        backgroundColor: Colors.white,
-        // body: OffersReceviedPage(),
-        // body: NftInfoListView(nfttileinfos: nfttileinfos),
+      backgroundColor: Colors.white,
+      // body: OffersReceviedPage(),
+      // body: NftInfoListView(nfttileinfos: nfttileinfos),
 
-        body: CardPage(),
+      body: const Search1(),
 
-        // body: GridViewOfProfile(
-        //     heightc: heightc, widthc: widthc, profiles: profiels),
-        );
+      // body: GridViewOfProfile(
+      //     heightc: heightc, widthc: widthc, profiles: profiels),
+    );
   }
 }
 

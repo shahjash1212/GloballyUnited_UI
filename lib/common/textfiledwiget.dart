@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:globally_united_ui/pages/applicationstrings.dart';
 
 class TextFiledWiget extends StatefulWidget {
-
-  
   const TextFiledWiget({Key? key}) : super(key: key);
 
   @override

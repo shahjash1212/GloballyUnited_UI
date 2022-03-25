@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
       // body: OffersReceviedPage(),
       // body: NftInfoListView(nfttileinfos: nfttileinfos),
 
-      body: NotificationPage(),
+      body: NFTSecurityPage(),
 
       // body: GridViewOfProfile(
       //     heightc: heightc, widthc: widthc, profiles: profiels),

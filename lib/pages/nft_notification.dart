@@ -108,12 +108,12 @@ class _NotificationItemState extends State<NotificationItem> {
                 onChanged: (newvalue) {
                   setState(() {
                     checkBoxValue = newvalue;
-                    // checkBoxValue ? print('yesssss') : print("NOOOOO");
-                    // checkBoxValue ? Checked() : UnChecked();
-                    // checkBoxValue
-                    //     ? ScaffoldMessenger.of(context)
-                    //         .showSnackBar(SnackBar(content: Text(widget.title)))
-                    //     : UnChecked();
+                    checkBoxValue ? print('yesssss') : print("NOOOOO");
+                    checkBoxValue ? Checked() : UnChecked();
+                    checkBoxValue
+                        ? ScaffoldMessenger.of(context)
+                            .showSnackBar(SnackBar(content: Text(widget.title)))
+                        : UnChecked();
                   });
                 }),
             Text(

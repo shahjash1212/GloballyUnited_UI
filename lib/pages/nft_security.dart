@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:globally_united_ui/model/colourmodel.dart';
 import 'package:globally_united_ui/pages/applicationstrings.dart';
 
 class NFTSecurityPage extends StatelessWidget {
@@ -31,14 +32,17 @@ class NFTSecurityPage extends StatelessWidget {
             NFTSecurityItem(
               title: ApplicationStrings.SECURITY_NFT_TITLE,
               discription: ApplicationStrings.SECURITY_NFT_DISC,
+              popup: false,
             ),
             NFTSecurityItem(
               title: ApplicationStrings.SECURITY_AUTH_TITLE,
               discription: ApplicationStrings.SECURITY_AUTH_DISC,
+              popup: true,
             ),
             NFTSecurityItem(
               title: ApplicationStrings.SECURITY_SMS_TITLE,
               discription: ApplicationStrings.SECURITY_SMS_DISC,
+              popup: false,
             ),
           ],
         ),
@@ -48,14 +52,16 @@ class NFTSecurityPage extends StatelessWidget {
 }
 
 class NFTSecurityItem extends StatelessWidget {
-  const NFTSecurityItem({
+  NFTSecurityItem({
     Key? key,
     required this.title,
     required this.discription,
+    required this.popup,
   }) : super(key: key);
 
   final title;
   final discription;
+  bool popup = false;
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +85,13 @@ class NFTSecurityItem extends StatelessWidget {
                 color: const Color(0xff341e43),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
-                onPressed: () {},
+                onPressed: () {
+                  popup
+                      ? showDialog(
+                          context: context,
+                          builder: (context) => _buildPopupDialog(context))
+                      : null;
+                },
                 child: const Text(
                   "Enable",
                   style: TextStyle(
@@ -98,4 +110,80 @@ class NFTSecurityItem extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _buildPopupDialog(BuildContext context) {
+  return AlertDialog(
+    content: Container(
+      height: 250,
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text('2 FA',
+                  style: TextStyle(
+                      color: Color(0xff341e43),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700)),
+              IconButton(
+                icon: const Icon(Icons.close),
+                color: const Color(0xff341e43),
+                padding: EdgeInsets.zero,
+                splashColor: Color(0xff341e43),
+                iconSize: 35,
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text("Please ennter verification code sent to your email"),
+              const SizedBox(height: 10),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.grey.shade200),
+                child: const TextField(
+                  cursorColor: Color(0xff341e43),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.all(10),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                'Resend',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xff341e43),
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Center(
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 80, vertical: 10),
+                  decoration: BoxDecoration(
+                      color: const Color(0xff341e43),
+                      borderRadius: BorderRadius.circular(50)),
+                  child: const Text(
+                    'Continue',
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w700),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
 }
